@@ -1,0 +1,149 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.cabecalho {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.subtitulo {
+  margin-top: 8px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+.carregando {
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.acoes {
+  display: flex;
+  justify-content: center;
+}
+
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 48px 24px;
+  border: 1px dashed var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.vazio h2 {
+  font-size: 18px;
+  color: var(--color-navy);
+}
+
+.vazio p {
+  font-size: 14px;
+}
+
+.lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-auto-rows: 1fr;
+  gap: 16px;
+  list-style: none;
+}
+
+.foto,
+.semFoto {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 4px;
+  border-radius: 50%;
+}
+
+.foto {
+  object-fit: cover;
+}
+
+.semFoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-200);
+  color: var(--color-text-muted);
+}
+
+.email {
+  overflow: hidden;
+  max-width: 100%;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 8px;
+  list-style: none;
+}
+
+.confirmacao {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.acoesModal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .acoes > * {
+    flex: 1;
+  }
+}
+
+.semHorarios {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: var(--color-info-bg);
+  color: var(--color-navy);
+  font-size: 13px;
+  text-align: left;
+}
+
+.semHorarios svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-warning);
+}
+
+.acoesCartao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  width: 100%;
+}
+
+.acoesCartao > :first-child {
+  grid-column: 1 / -1;
+}

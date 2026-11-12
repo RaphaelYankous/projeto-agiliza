@@ -1,0 +1,1 @@
+export { SeletorEstrelas } from './SeletorEstrelas'

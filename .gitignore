@@ -1,0 +1,8 @@
+   ai/
+   .claude/
+   .DS_Store
+   node_modules/
+   dist/
+   *.env
+   !*.env.example
+   *.tsbuildinfo

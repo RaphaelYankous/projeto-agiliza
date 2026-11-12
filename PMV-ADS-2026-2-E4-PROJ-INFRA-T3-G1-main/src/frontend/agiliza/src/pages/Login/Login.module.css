@@ -1,0 +1,35 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.esqueceuSenhaContainer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: -10px;
+  margin-bottom: -4px;
+}
+
+.separador {
+  margin: -4px 0;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.footer {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.link {
+  font-weight: 600;
+  color: var(--color-coral);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

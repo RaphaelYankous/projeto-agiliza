@@ -1,0 +1,31 @@
+.pagina {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.cabecalho {
+  text-align: center;
+}
+
+.titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cor-texto, #1a202c);
+  margin: 0 0 8px 0;
+}
+
+.instrucao {
+  font-size: 1rem;
+  color: var(--cor-texto-secundario, #718096);
+  margin: 0;
+}
+
+.carregando {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--cor-texto-secundario, #718096);
+}

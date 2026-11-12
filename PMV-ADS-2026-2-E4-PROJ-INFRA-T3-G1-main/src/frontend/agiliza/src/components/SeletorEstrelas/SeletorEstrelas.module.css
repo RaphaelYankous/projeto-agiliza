@@ -1,0 +1,56 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.estrelas {
+  display: flex;
+  gap: 4px;
+}
+
+.estrela {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-gold);
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease;
+}
+
+span.estrela {
+  width: 32px;
+  height: 32px;
+  cursor: default;
+}
+
+button.estrela {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Só destaca no hover de mouse; em telas de toque o hover "gruda" depois do toque. */
+@media (hover: hover) {
+  button.estrela:hover {
+    background-color: var(--color-neutral-200);
+  }
+}
+
+button.estrela:active {
+  transform: scale(0.92);
+}
+
+button.estrela:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+.erro {
+  font-size: 13px;
+  color: var(--color-danger);
+}

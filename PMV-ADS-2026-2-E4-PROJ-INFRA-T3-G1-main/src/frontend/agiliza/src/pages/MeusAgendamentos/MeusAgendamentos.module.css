@@ -1,0 +1,217 @@
+.pagina {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 820px;
+  margin: 0 auto;
+  padding-bottom: 48px;
+}
+
+.titulo {
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 700;
+  color: var(--color-navy);
+  text-align: center;
+}
+
+.carregando {
+  padding: 24px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.vazio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 48px 24px;
+  border: 1px dashed var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.vazio h2 {
+  font-size: 18px;
+  color: var(--color-navy);
+}
+
+.vazio p {
+  font-size: 14px;
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+}
+
+.cartao {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+.imagem {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 64px;
+  border-radius: 8px;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.lateral {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Texto coral sem caixa, como no wireframe. O seletor com .lateral garante que vença o estilo do ActionButton. */
+.lateral .cancelar {
+  min-height: 36px;
+  padding: 0 8px;
+  border-color: transparent;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-coral);
+}
+
+.lateral .cancelar:hover:not(:disabled) {
+  background-color: var(--color-coral-light);
+}
+
+.lateral .avaliar {
+  min-height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.avaliado {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 36px;
+  padding: 0 8px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.avaliado:hover {
+  background-color: var(--color-info-bg);
+}
+
+.avaliado:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+.avaliado svg {
+  color: var(--color-gold);
+}
+
+.estabelecimento {
+  min-width: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-navy);
+  overflow-wrap: anywhere;
+}
+
+.status {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.statusPendente {
+  background-color: var(--color-coral-light);
+  color: var(--color-navy);
+}
+
+.statusConfirmado {
+  background-color: var(--color-info-bg);
+  color: var(--color-navy);
+}
+
+.statusConcluido {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.statusCancelado {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.dataHora {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: var(--color-text-muted);
+}
+
+.dataHora svg {
+  flex-shrink: 0;
+  color: var(--color-coral);
+}
+
+.servico {
+  font-size: 15px;
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.confirmacao {
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.acoesModal {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 480px) {
+  .cartao {
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  .imagem {
+    flex-basis: 48px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .acoesModal {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,77 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.botao {
+  min-height: 40px;
+  padding: 8px 20px;
+  font-size: 14px;
+}
+
+.anexada {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  padding: 8px 12px 8px 8px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.previa {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.nome {
+  min-width: 0;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.remover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-danger);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  color: var(--color-danger);
+  cursor: pointer;
+}
+
+.remover:hover:not(:disabled) {
+  background-color: var(--color-danger-bg);
+}
+
+.remover:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+.remover:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.entrada {
+  display: none;
+}
+
+.erro {
+  font-size: 13px;
+  color: var(--color-danger);
+}

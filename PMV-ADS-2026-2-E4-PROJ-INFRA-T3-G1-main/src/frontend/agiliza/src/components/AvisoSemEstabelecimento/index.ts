@@ -1,0 +1,1 @@
+export { AvisoSemEstabelecimento } from './AvisoSemEstabelecimento'

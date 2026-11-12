@@ -1,0 +1,1 @@
+export { AnexoFoto } from './AnexoFoto'

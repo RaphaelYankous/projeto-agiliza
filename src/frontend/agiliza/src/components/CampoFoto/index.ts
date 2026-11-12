@@ -1,0 +1,1 @@
+export { CampoFoto } from './CampoFoto'

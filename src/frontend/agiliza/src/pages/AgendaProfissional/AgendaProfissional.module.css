@@ -1,0 +1,35 @@
+.agenda { max-width: 860px; margin: 0 auto; padding-bottom: 48px; }
+.cabecalho { display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 24px; }
+.cabecalho h1 { font-size: clamp(21px, 3vw, 28px); text-align: center; }
+.hoje { background: none; border: 0; color: var(--color-coral); font-weight: 700; cursor: pointer; }
+.hoje:disabled { opacity: .45; cursor: default; }
+.navegacao { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; text-transform: capitalize; font-weight: 600; }
+.navegacao button { border: 1px solid var(--color-border); background: var(--color-surface); border-radius: 8px; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; color: var(--color-text); cursor: pointer; }
+.dias { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 12px; margin-bottom: 24px; }
+.dia { display: flex; flex-direction: column; gap: 8px; align-items: center; padding: 16px 4px; border: 1px solid var(--color-border); border-radius: 7px; background: var(--color-surface); color: var(--color-text); cursor: pointer; }
+.dia span { color: var(--color-text-muted); text-transform: capitalize; font-size: 12px; }
+.dia strong { font-size: 18px; }
+.diaAtivo { background: var(--color-coral); border-color: var(--color-coral); color: var(--color-surface); }
+.diaAtivo span { color: var(--color-surface); }
+.grade { display: flex; flex-direction: column; gap: 12px; }
+.linha { display: grid; grid-template-columns: 64px minmax(0, 1fr); align-items: center; gap: 12px; }
+.horario { font-size: 13px; font-weight: 700; }
+.bloco { width: 100%; min-height: 42px; padding: 11px 16px; border-radius: 6px; border: 1px solid var(--color-border); text-align: left; font: inherit; font-size: 14px; cursor: pointer; overflow-wrap: anywhere; }
+.bloco:hover { border-color: var(--color-coral); }
+.livre { background: var(--color-surface); color: var(--color-text-muted); }
+.agendado { background: var(--color-info-bg); color: var(--color-navy); font-weight: 600; }
+.bloqueado { background: var(--color-neutral-200); color: var(--color-navy); font-weight: 600; }
+.erro { padding: 12px; margin: 16px 0; background: var(--color-danger-bg); color: var(--color-danger); border-radius: 6px; }
+.aviso { padding: 32px 12px; text-align: center; color: var(--color-text-muted); }
+.bloqueiosDoDia { padding: 16px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 6px; }
+.bloqueiosDoDia h2 { font-size: 16px; margin-bottom: 10px; }
+.bloqueiosDoDia p { margin: 6px 0; }
+.linkBloqueios { margin-top: 24px; text-align: center; }
+.linkBloqueios a { color: var(--color-coral); font-weight: 600; }
+.campo { display: flex; flex-direction: column; gap: 8px; font-weight: 600; }
+.campo input { padding: 10px; border: 1px solid var(--color-border); border-radius: 6px; font: inherit; }
+.acoes { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; }
+.acoes button { padding: 10px 14px; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-surface); cursor: pointer; }
+.acoes .confirmar { background: var(--color-coral); border-color: var(--color-coral); color: var(--color-surface); }
+.agenda button:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 2px; }
+@media (max-width: 600px) { .dias { gap: 4px; } .dia { padding: 10px 0; } .dia strong { font-size: 15px; } .linha { grid-template-columns: 48px minmax(0, 1fr); gap: 8px; } .bloco { padding: 10px; } }

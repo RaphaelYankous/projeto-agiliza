@@ -1,0 +1,85 @@
+.campo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.foto,
+.semFoto {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+}
+
+.foto {
+  object-fit: cover;
+}
+
+.semFoto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-neutral-200);
+  color: var(--color-text-muted);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--color-navy);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  color: var(--color-navy);
+  cursor: pointer;
+}
+
+.icone:hover {
+  background-color: var(--color-info-bg);
+}
+
+.perigo {
+  border-color: var(--color-border);
+  color: var(--color-danger);
+}
+
+.perigo:hover {
+  background-color: var(--color-danger-bg);
+}
+
+.icone:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+.legenda {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.dica {
+  max-width: 320px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.entrada {
+  display: none;
+}
+
+.erro {
+  font-size: 13px;
+  color: var(--color-danger);
+  text-align: center;
+}

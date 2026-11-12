@@ -1,0 +1,1 @@
+export { FotoEstabelecimento } from './FotoEstabelecimento'

@@ -1,0 +1,15 @@
+POST http://localhost:3000/api/avaliacoes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJmOGE0MDQ1Yy1hZmY3LTRhYzUtYmE2NS05ZTUyMjY4NDJhYTYiLCJlbWFpbCI6ImtlbHZlbnJzaWx2YUBob3RtYWlsLmNvbSIsInJvbGUiOiJjbGllbnRlIiwiaWF0IjoxNzkxNTU1ODY5LCJleHAiOjE3OTE1NTY0Njl9.-PbheWGnpiJrgwGHndT-M--vngkHUjF32X7uQJjuLdg
+
+{
+  "clienteId": "dad32af5-7e8a-4ee2-9953-cb51b8e611ba",
+  "profissionalId": "uuid-do-profissional",
+  "agendamentoId": "uuid-do-agendamento",
+  "nota": 5,
+  "comentario": "Serviço impecável e excelente atendimento do Joao!"
+}
+
+### Listar avaliações
+GET http://localhost:3000/api/avaliacoes
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkYWQzMmFmNS03ZThhLTRlZTItOTk1My1jYjUxYjhlNjExYmEiLCJlbWFpbCI6ImtlbHZlbnJzaWx2YUBob3RtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc5MTI0MzUxNywiZXhwIjoxNzkxMjQ0MTE3fQ.1pW1B_sp4-f-efsMlLCV8mrKvcdWZxstrQvSkYV95-0

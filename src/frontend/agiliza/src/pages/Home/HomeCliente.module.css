@@ -1,0 +1,245 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.tituloOculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 52px;
+  padding: 0 20px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  color: var(--color-text-muted);
+}
+
+.busca:focus-within {
+  border-color: var(--color-navy);
+  outline: 2px solid transparent;
+}
+
+.campoBusca {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  color: var(--color-text);
+}
+
+.campoBusca::placeholder {
+  color: var(--color-text-muted);
+}
+
+.categorias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.colunaMapa,
+.colunaLista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.subtitulo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.aviso {
+  padding: 10px 14px;
+  border-radius: 8px;
+  background-color: var(--color-coral-light);
+  color: var(--color-navy);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.cartaoMapa {
+  padding: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+
+/* isolation: mantém os z-index internos do Leaflet dentro do mapa,
+   para ele não ficar por cima do cabeçalho fixo nem do menu lateral no celular */
+.mapa {
+  position: relative;
+  isolation: isolate;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #eef2ec;
+}
+
+.mapa :global(.leaflet-container) {
+  width: 100%;
+  height: 100%;
+  font-family: inherit;
+}
+
+.carregando {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--color-text-muted);
+}
+
+.lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  list-style: none;
+}
+
+.cartaoEstabelecimento {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+}
+.linkEstabelecimento { display: flex; align-items: center; gap: 14px; width: 100%; color: inherit; text-decoration: none; }
+.linkEstabelecimento:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 4px; }
+
+.foto {
+  width: 100px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.nomeEstabelecimento {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-navy);
+  overflow-wrap: anywhere;
+}
+
+.detalhes {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.erro {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+  font-size: 14px;
+}
+
+.vazio {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.marcador,
+.marcadorUsuario {
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.marcador {
+  background-color: var(--color-coral);
+  cursor: pointer;
+}
+
+.marcador:focus-visible {
+  outline: 3px solid var(--color-navy);
+  outline-offset: 2px;
+}
+
+.marcadorUsuario {
+  background-color: var(--color-navy);
+}
+
+.ajuda {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 40px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--color-navy);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+  font: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ajuda:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .colunas {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .mapa {
+    height: 320px;
+  }
+
+  .cartaoEstabelecimento {
+    gap: 12px;
+  }
+
+  .foto {
+    width: 72px;
+    height: 64px;
+  }
+}

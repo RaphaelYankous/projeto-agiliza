@@ -1,0 +1,71 @@
+.grade {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--color-neutral-200);
+}
+
+.foto {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.abrir {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.abrir:hover .foto {
+  opacity: 0.9;
+}
+
+.abrir:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: -3px;
+}
+
+.remover {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  color: var(--color-danger);
+  cursor: pointer;
+}
+
+.remover:hover {
+  background-color: var(--color-danger-bg);
+}
+
+.remover:focus-visible {
+  outline: 3px solid var(--color-coral);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
